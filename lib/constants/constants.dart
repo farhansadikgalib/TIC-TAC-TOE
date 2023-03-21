@@ -12,7 +12,7 @@ class Constants{
 
   //Texts
   static const String appTitle = "TIC TAC TOE";
-  static const String footer_details = "Developed by Farhan";
+  static const String footer_details = "👨‍💻  Developed by Farhan";
   static const String newGameText = 'new game';
   static const String resetGameText = 'reset game';
   static const String resetButtonText = 'play again';

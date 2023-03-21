@@ -1,6 +1,6 @@
 # tictactoe
 
-Flutter Getx sample project.
+Flutter Simple Game project.
 
 ## Getting Started
 
