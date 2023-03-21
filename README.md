@@ -1,6 +1,6 @@
 # TIC TAC TOE 
 
-A Simple TIC TAC TOE game project.
+A Simple TIC TAC TOE Game
 
 
 # Screenshots
@@ -16,4 +16,4 @@ A Simple TIC TAC TOE game project.
 
 
 # Download link:
-https://mega.nz/file/eOwkFbIQ#2pdg4NNknkRqitpakpTI_0idYKGXynVFTNx7mCdSaUE
+https://mega.nz/file/eaZ1RDYQ#IGpou9E1OH8eU0iB3igS2c_Fl6m70qmOz5PhN3JsU4g
