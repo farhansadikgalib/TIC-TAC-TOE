@@ -1,16 +1,16 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
-import 'package:tictactoe/controller/tic_tac_toe.dart';
-import 'package:tictactoe/utils/util.dart';
 import '../constants/constants.dart';
+
+import '../controllers/tic_tac_toe.dart';
 import '../utils/config.dart';
+import '../utils/util.dart';
 
 class CubesWidget extends StatelessWidget {
   final String displayElement;
   final int i, j;
-  final TicTacToeController tictacToeController =
+  final TicTacToeController ticTacToeController =
       Get.put(TicTacToeController());
-
   CubesWidget(
       {Key? key,
       required this.displayElement,
@@ -21,31 +21,27 @@ class CubesWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
-    return GetBuilder<TicTacToeController>(
-      builder: (_) {
-        return IgnorePointer(
-          ignoring: tictacToeController.stopInteraction.value,
-          child: Container(
-            width: SizeConfig.safeBlockHorizontal * 26,
-            height: SizeConfig.safeAreaVertical * 12,
-            decoration: BoxDecoration(
+    return GetBuilder<TicTacToeController>(builder: (_) {
+      return IgnorePointer(
+        ignoring: ticTacToeController.stopInteraction.value,
+        child: Container(
+          width: SizeConfig.safeBlockHorizontal * 26,
+          height: SizeConfig.safeBlockVertical * 12,
+          decoration: BoxDecoration(
               color: Constants.backgroundColor,
-              border: Util.getBorderSide(i, j),
-            ),
-            child: Center(
+              border: Util.getBorderSide(i, j)),
+          child: Center(
               child: Text(
-                displayElement,
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                    fontSize: 80,
-                    color: displayElement == 'X'
-                        ? Constants.whiteColor
-                        : Constants.accentColor),
-              ),
-            ),
-          ),
-        );
-      },
-    );
+            displayElement,
+            textAlign: TextAlign.center,
+            style: TextStyle(
+                fontSize: 80,
+                color: displayElement == 'X'
+                    ? Constants.whiteColor
+                    : Constants.accentColor),
+          )),
+        ),
+      );
+    });
   }
 }

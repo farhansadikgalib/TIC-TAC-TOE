@@ -1,12 +1,12 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
-import 'package:tictactoe/constants/constants.dart';
-import 'package:tictactoe/utils/config.dart';
+
+import '../constants/constants.dart';
+import '../utils/config.dart';
 
 class ScoreboardWidget extends StatelessWidget {
   final RxInt xScore;
   final RxInt yScore;
-
   const ScoreboardWidget({Key? key, required this.xScore, required this.yScore})
       : super(key: key);
 
@@ -18,8 +18,8 @@ class ScoreboardWidget extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Text(
-          "$xScore",
-          style: TextStyle(
+          '$xScore',
+          style: const TextStyle(
               color: Constants.whiteColor,
               fontSize: 56,
               fontWeight: FontWeight.w500),
@@ -27,23 +27,22 @@ class ScoreboardWidget extends StatelessWidget {
         Padding(
           padding: EdgeInsets.symmetric(
               horizontal: SizeConfig.safeBlockHorizontal * 4),
-          child: Text(
+          child:  const Text(
             ":",
-            style:
-                TextStyle(fontSize: 46, height: 1, fontWeight: FontWeight.w500),
+            style: TextStyle(
+                color: Constants.yellowColor,
+                fontSize: 46,
+                height: 1,
+                fontWeight: FontWeight.w500),
           ),
         ),
         Text(
-          "$yScore",
-          style: TextStyle(
-              color: Constants.whiteColor,
+          '$yScore',
+          style: const TextStyle(
+              color: Constants.accentColor,
               fontSize: 56,
               fontWeight: FontWeight.w500),
         ),
-        Padding(
-          padding: EdgeInsets.symmetric(
-              horizontal: SizeConfig.safeBlockHorizontal * 4),
-        )
       ],
     );
   }

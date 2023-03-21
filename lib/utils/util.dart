@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 
 import '../constants/constants.dart';
 
-
 class Util {
   static String calculateWinner(List<List<String>> data) {
     // if Draw happens,
